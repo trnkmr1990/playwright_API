@@ -1,0 +1,16 @@
+{
+  "newUser": {
+    "name": "Test User",
+    "email": "apitest+{{ts}}@example.com",
+    "password": "Password123!",
+    "title": "Mr"
+  },
+  "validLogin": {
+    "email": "apitest@example.com",
+    "password": "password123"
+  },
+  "invalidLogin": {
+    "email": "notexists@example.com",
+    "password": "wrong"
+  }
+}
