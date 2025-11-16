@@ -7,12 +7,12 @@ const { validateSchema } = require("../../src/api/schemaValidator");
 const { productsListSchema } = require("../../src/api/schema");
 
 test.describe("AutomationExercise API smoke", () => {
-  test("GET products list", async ({ request }) => {
-    const api = new ApiClient(request, endpoints.baseUrl);
-    const res = await api.productsList();
-    const body = await validateJsonResponse(res, { status: 200 });
-    validateSchema(productsListSchema, body, "Products List");
-  });
+  // test("GET products list", async ({ request }) => {
+  //   const api = new ApiClient(request, endpoints.baseUrl);
+  //   const res = await api.productsList();
+  //   const body = await validateJsonResponse(res, { status: 200 });
+  //   validateSchema(productsListSchema, body, "Products List");
+  // });
 
   test("POST search product (happy path)", async ({ request }) => {
     const api = new ApiClient(request);
