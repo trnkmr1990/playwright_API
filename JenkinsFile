@@ -1,0 +1,57 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'Node20'       // must match the name you configured in Jenkins
+    }
+
+    environment {
+        CI = "true"           // lets Playwright know it's running in CI
+        // BASE_URL = "https://automationexercise.com"  // optional override
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // If you use "Pipeline from SCM" this becomes checkout scm
+                checkout scm
+            }
+        }
+
+        stage('Install dependencies') {
+            steps {
+                bat 'npm ci'   // or 'npm install' if you prefer
+            }
+        }
+
+        stage('Run Playwright API tests') {
+            steps {
+                // For API tests we don't strictly need browsers, but
+                // this keeps it ready for UI tests later too:
+                // bat 'npx playwright install'
+                bat 'npx playwright test'
+            }
+        }
+
+        stage('Archive Playwright HTML report') {
+            steps {
+                // Archive folder so it can be downloaded
+                archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
+            }
+        }
+    }
+
+    post {
+        always {
+            // Publish HTML report (need HTML Publisher plugin)
+            publishHTML([
+                reportDir: 'playwright-report',
+                reportFiles: 'index.html',
+                reportName: 'Playwright Report',
+                keepAll: true,
+                alwaysLinkToLastBuild: true,
+                allowMissing: true
+            ])
+        }
+    }
+}
