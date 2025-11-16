@@ -46,7 +46,7 @@ pipeline {
             // Publish HTML report (need HTML Publisher plugin)
             publishHTML([
                 reportDir: 'playwright-report',
-                reportFiles: 'index.html',
+                reportFiles: 'playwright-report/index.html',
                 reportName: 'Playwright Report',
                 keepAll: true,
                 alwaysLinkToLastBuild: true,
