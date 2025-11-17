@@ -38,9 +38,3 @@ pipeline {
         }
     }
 }
-            steps {
-                script {
-                    
-                }
-            }
-        }
