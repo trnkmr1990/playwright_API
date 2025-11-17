@@ -3,6 +3,7 @@ const config = {
   testDir: "./tests",
   timeout: 30_000,
   expect: { timeout: 5000 },
+  retries: 1,
   use: {
     extraHTTPHeaders: {
       Accept: "application/json",

@@ -1,24 +1,558 @@
-<testsuites id="" name="" tests="7" failures="0" skipped="0" errors="0" time="4.736592">
-<testsuite name="api\api.spec.js" timestamp="2025-11-17T10:52:23.230Z" hostname="" tests="4" failures="0" skipped="0" time="3.72" errors="0">
-<testcase name="AutomationExercise API smoke › GET products list" classname="api\api.spec.js" time="2.37">
+<testsuites id="" name="" tests="8" failures="1" skipped="0" errors="0" time="6.668871">
+<testsuite name="api\api.spec.js" timestamp="2025-11-17T11:50:46.938Z" hostname="" tests="4" failures="0" skipped="0" time="2.642" errors="0">
+<testcase name="AutomationExercise API smoke › GET products list" classname="api\api.spec.js" time="1.354">
 <system-out>
-<![CDATA[[2025-11-17T10:52:26.437Z] [GET] https://automationexercise.com/api/productsList -> 200 (2348 ms)
+<![CDATA[[2025-11-17T11:50:49.130Z] [GET] https://automationexercise.com/api/productsList -> 200 (1334 ms)
 ]]>
 </system-out>
 </testcase>
-<testcase name="AutomationExercise API smoke › POST search product (happy path)" classname="api\api.spec.js" time="0.324">
+<testcase name="AutomationExercise API smoke › POST search product (happy path)" classname="api\api.spec.js" time="0.307">
 </testcase>
-<testcase name="AutomationExercise API smoke › POST login valid/invalid" classname="api\api.spec.js" time="0.368">
+<testcase name="AutomationExercise API smoke › POST login valid/invalid" classname="api\api.spec.js" time="0.337">
 </testcase>
-<testcase name="AutomationExercise API smoke › Create and delete user (flow)" classname="api\api.spec.js" time="0.658">
+<testcase name="AutomationExercise API smoke › Create and delete user (flow)" classname="api\api.spec.js" time="0.644">
 </testcase>
 </testsuite>
-<testsuite name="api\api1.spec.js" timestamp="2025-11-17T10:52:23.230Z" hostname="" tests="3" failures="0" skipped="0" time="3.328" errors="0">
-<testcase name="AutomationExercise API smoke › POST search product (happy path)" classname="api\api1.spec.js" time="2.293">
+<testsuite name="api\api1.spec.js" timestamp="2025-11-17T11:50:46.938Z" hostname="" tests="4" failures="1" skipped="0" time="4.053" errors="0">
+<testcase name="AutomationExercise API smoke › GET products list" classname="api\api1.spec.js" time="2.095">
+<failure message="api1.spec.js:10:3 GET products list" type="FAILURE">
+<![CDATA[  api\api1.spec.js:10:3 › AutomationExercise API smoke › GET products list ─────────────────────────
+
+    Error: Schema validation failed for Products List
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+       at ..\src\api\schemaValidator.js:18
+
+      16 |   }
+      17 |
+    > 18 |   expect(valid, `Schema validation failed for ${schemaName}`).toBe(true);
+         |                                                               ^
+      19 | }
+      20 |
+      21 | module.exports = { validateSchema };
+        at validateSchema (C:\Users\trnkm\OneDrive\Desktop\playwright_API\src\api\schemaValidator.js:18:63)
+        at C:\Users\trnkm\OneDrive\Desktop\playwright_API\tests\api\api1.spec.js:14:5
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Schema validation failed for Products List
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+       at ..\src\api\schemaValidator.js:18
+
+      16 |   }
+      17 |
+    > 18 |   expect(valid, `Schema validation failed for ${schemaName}`).toBe(true);
+         |                                                               ^
+      19 | }
+      20 |
+      21 | module.exports = { validateSchema };
+        at validateSchema (C:\Users\trnkm\OneDrive\Desktop\playwright_API\src\api\schemaValidator.js:18:63)
+        at C:\Users\trnkm\OneDrive\Desktop\playwright_API\tests\api\api1.spec.js:14:5
+]]>
+</failure>
+<system-out>
+<![CDATA[[2025-11-17T11:50:49.176Z] [GET] https://automationexercise.com/api/productsList -> 200 (1381 ms)
+[2025-11-17T11:50:50.641Z] [GET] https://automationexercise.com/api/productsList -> 200 (617 ms)
+]]>
+</system-out>
+<system-err>
+<![CDATA[Schema validation failed for Products List [
+  {
+    instancePath: [32m'/products/0/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/1/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/2/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/3/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/4/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/5/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/6/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/7/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/8/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/9/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/10/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/11/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/12/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/13/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/14/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/15/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/16/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/17/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/18/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/19/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/20/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/21/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/22/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/23/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/24/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/25/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/26/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/27/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/28/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/29/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/30/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/31/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/32/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/33/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  }
+]
+Schema validation failed for Products List [
+  {
+    instancePath: [32m'/products/0/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/1/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/2/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/3/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/4/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/5/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/6/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/7/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/8/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/9/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/10/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/11/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/12/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/13/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/14/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/15/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/16/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/17/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/18/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/19/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/20/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/21/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/22/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/23/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/24/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/25/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/26/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/27/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/28/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/29/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/30/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/31/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/32/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  },
+  {
+    instancePath: [32m'/products/33/id'[39m,
+    schemaPath: [32m'#/properties/products/items/properties/id/type'[39m,
+    keyword: [32m'type'[39m,
+    params: { type: [32m'string'[39m },
+    message: [32m'must be string'[39m
+  }
+]
+]]>
+</system-err>
 </testcase>
-<testcase name="AutomationExercise API smoke › POST login valid/invalid" classname="api\api1.spec.js" time="0.374">
+<testcase name="AutomationExercise API smoke › POST search product (happy path)" classname="api\api1.spec.js" time="1.006">
 </testcase>
-<testcase name="AutomationExercise API smoke › Create and delete user (flow)" classname="api\api1.spec.js" time="0.661">
+<testcase name="AutomationExercise API smoke › POST login valid/invalid" classname="api\api1.spec.js" time="0.351">
+</testcase>
+<testcase name="AutomationExercise API smoke › Create and delete user (flow)" classname="api\api1.spec.js" time="0.601">
 </testcase>
 </testsuite>
 </testsuites>

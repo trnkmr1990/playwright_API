@@ -1,0 +1,240 @@
+Schema validation failed for Products List [
+  {
+    instancePath: '/products/0/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/1/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/2/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/3/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/4/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/5/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/6/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/7/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/8/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/9/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/10/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/11/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/12/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/13/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/14/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/15/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/16/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/17/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/18/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/19/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/20/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/21/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/22/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/23/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/24/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/25/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/26/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/27/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/28/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/29/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/30/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/31/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/32/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  },
+  {
+    instancePath: '/products/33/id',
+    schemaPath: '#/properties/products/items/properties/id/type',
+    keyword: 'type',
+    params: { type: 'string' },
+    message: 'must be string'
+  }
+]
