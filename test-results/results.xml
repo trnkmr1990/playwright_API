@@ -1,0 +1,24 @@
+<testsuites id="" name="" tests="7" failures="0" skipped="0" errors="0" time="3.5405050000000005">
+<testsuite name="api\api.spec.js" timestamp="2025-11-17T06:18:54.486Z" hostname="" tests="4" failures="0" skipped="0" time="2.388" errors="0">
+<testcase name="AutomationExercise API smoke › GET products list" classname="api\api.spec.js" time="1.166">
+<system-out>
+<![CDATA[[2025-11-17T06:18:56.547Z] [GET] https://automationexercise.com/api/productsList -> 200 (1135 ms)
+]]>
+</system-out>
+</testcase>
+<testcase name="AutomationExercise API smoke › POST search product (happy path)" classname="api\api.spec.js" time="0.298">
+</testcase>
+<testcase name="AutomationExercise API smoke › POST login valid/invalid" classname="api\api.spec.js" time="0.336">
+</testcase>
+<testcase name="AutomationExercise API smoke › Create and delete user (flow)" classname="api\api.spec.js" time="0.588">
+</testcase>
+</testsuite>
+<testsuite name="api\api1.spec.js" timestamp="2025-11-17T06:18:54.486Z" hostname="" tests="3" failures="0" skipped="0" time="2.114" errors="0">
+<testcase name="AutomationExercise API smoke › POST search product (happy path)" classname="api\api1.spec.js" time="1.147">
+</testcase>
+<testcase name="AutomationExercise API smoke › POST login valid/invalid" classname="api\api1.spec.js" time="0.35">
+</testcase>
+<testcase name="AutomationExercise API smoke › Create and delete user (flow)" classname="api\api1.spec.js" time="0.617">
+</testcase>
+</testsuite>
+</testsuites>

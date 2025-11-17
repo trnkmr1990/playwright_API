@@ -38,8 +38,12 @@ pipeline {
 
     post {
         always {
-            echo "Publishing Playwright HTML Report..."
+            echo "Publishing Playwright Junit Report..."
 
+            junit 'results.xml'
+
+            echo "Publishing Playwright Junit Report..."
+            
             publishHTML([
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,

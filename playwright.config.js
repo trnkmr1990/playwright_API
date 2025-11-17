@@ -8,7 +8,11 @@ const config = {
       Accept: "application/json",
     },
   },
-  reporter: [["list"], ["html", { open: "never" }]],
+  reporter: [
+    ["list"],
+    ["html", { open: "never" }],
+    ["junit", { outputFile: "test-results/results.xml" }],
+  ],
 };
 
 module.exports = config;
