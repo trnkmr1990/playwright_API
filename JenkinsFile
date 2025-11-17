@@ -24,7 +24,7 @@ pipeline {
 
         stage('Run Playwright API Tests') {
             steps {
-                retry(1)                       
+                retry(1){                     
                     bat 'npx playwright test'
                 }
             }
