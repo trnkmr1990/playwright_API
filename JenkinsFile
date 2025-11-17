@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'Node20'
+        nodejs 'Node20'          // Name must match your NodeJS tool in Global Tool Configuration
     }
 
     environment {
@@ -31,31 +31,29 @@ pipeline {
 
     post {
         always {
-
             echo "Publishing Allure Report..."
-            // Allure reporting
+
+            // ✅ This is the ONLY Allure step you need in pipeline
             allure([
                 includeProperties: false,
                 jdk: '',
                 results: [[path: 'allure-results']]
             ])
-            allurePublish([
-                reportBuildPolicy: 'ALWAYS',
-                results: [[path: 'allure-results']]
-            ])
-            
-            echo "Publishing JUnit Test Results..."
-            junit 'test-results/results.xml'
 
+            // (Optional) keep HTML report as well
             echo "Publishing HTML Report..."
             publishHTML([
-                allowMissing: false,
+                allowMissing: true,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
                 reportDir: 'playwright-report',
                 reportFiles: 'index.html',
                 reportName: 'Playwright HTML Report'
             ])
+
+            // (Optional) if you later add JUnit:
+            echo "Publishing Junit Report..."
+            junit 'test-results/results.xml'
         }
     }
 }
