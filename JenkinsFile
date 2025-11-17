@@ -3,14 +3,6 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'Node20'
-    }
-
-    environment {
-        CI = "true"
-    }
-
     stages {
 
         stage('Checkout') {
@@ -21,21 +13,27 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                installDependencies()
+                script {
+                    playwrightUtils.installDependencies()
+                }
             }
         }
 
         stage('Run Tests') {
             steps {
-                runTests()
+                script {
+                    playwrightUtils.runTests()
+                }
             }
         }
-    }
 
-    post {
-        always {
-            publishAllure()
-            publishHtmlReport()
+        stage('Publish Reports') {
+            steps {
+                script {
+                    playwrightUtils.publishAllure()
+                    playwrightUtils.publishHtmlReport()
+                }
+            }
         }
     }
 }
