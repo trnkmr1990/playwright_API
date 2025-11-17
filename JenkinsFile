@@ -21,21 +21,21 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                utils.installDependencies()
+                installDependencies()
             }
         }
 
         stage('Run Tests') {
             steps {
-                utils.runTests()
+                runTests()
             }
         }
     }
 
     post {
         always {
-            utils.publishAllure()
-            utils.publishHTML()
+            publishAllure()
+            publishHTML()
         }
     }
 }
