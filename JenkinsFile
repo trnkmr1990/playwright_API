@@ -26,15 +26,21 @@ pipeline {
                 }
             }
         }
+    }
 
-        stage('Publish Reports') {
-            steps {
-                script {
-                    playwrightUtils.publishAllure()
-                    playwrightUtils.publishJUnitReport()
-                    playwrightUtils.publishHtmlReport()
-                }
+    post {
+        always {
+            script {
+                playwrightUtils.publishAllure()
+                playwrightUtils.publishJUnitReport()
+                playwrightUtils.publishHtmlReport()
             }
         }
     }
 }
+            steps {
+                script {
+                    
+                }
+            }
+        }
