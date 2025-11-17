@@ -27,23 +27,15 @@ pipeline {
                 bat 'npx playwright test'
             }
         }
-
-        stage('Debug Workspace') {
-            steps {
-                bat 'dir'
-                bat 'dir playwright-report'
-            }
-        }
     }
 
     post {
         always {
-            echo "Publishing Playwright Junit Report..."
 
-            junit 'results.xml'
+            echo "Publishing JUnit Test Results..."
+            junit 'test-results/results.xml'
 
-            echo "Publishing Playwright Junit Report..."
-            
+            echo "Publishing HTML Report..."
             publishHTML([
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
@@ -52,8 +44,6 @@ pipeline {
                 reportFiles: 'index.html',
                 reportName: 'Playwright HTML Report'
             ])
-
-            archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
         }
     }
 }
