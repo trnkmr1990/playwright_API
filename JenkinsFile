@@ -1,8 +1,11 @@
+@Library('playwright-lib') _
+def utils = new playwrightUtils()
+
 pipeline {
     agent any
 
     tools {
-        nodejs 'Node20'          // Name must match your NodeJS tool in Global Tool Configuration
+        nodejs 'Node20'
     }
 
     environment {
@@ -10,52 +13,30 @@ pipeline {
     }
 
     stages {
+
         stage('Checkout') {
             steps {
                 checkout scm
             }
         }
 
-        stage('Install dependencies') {
+        stage('Install Dependencies') {
             steps {
-                bat 'npm ci'
+                utils.installDependencies()
             }
         }
 
-        stage('Run Playwright API Tests') {
+        stage('Run Tests') {
             steps {
-                retry(1){                     
-                    bat 'npx playwright test'
-                }
+                utils.runTests()
             }
         }
     }
 
     post {
         always {
-            echo "Publishing Allure Report..."
-
-            // ✅ This is the ONLY Allure step you need in pipeline
-            allure([
-                includeProperties: false,
-                jdk: '',
-                results: [[path: 'allure-results']]
-            ])
-
-            // (Optional) keep HTML report as well
-            echo "Publishing HTML Report..."
-            publishHTML([
-                allowMissing: true,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: 'playwright-report',
-                reportFiles: 'index.html',
-                reportName: 'Playwright HTML Report'
-            ])
-
-            // (Optional) if you later add JUnit:
-            echo "Publishing Junit Report..."
-            junit 'test-results/results.xml'
+            utils.publishAllure()
+            utils.publishHTML()
         }
     }
 }
