@@ -32,6 +32,18 @@ pipeline {
     post {
         always {
 
+            echo "Publishing Allure Report..."
+            // Allure reporting
+            allure([
+                includeProperties: false,
+                jdk: '',
+                results: [[path: 'allure-results']]
+            ])
+            allurePublish([
+                reportBuildPolicy: 'ALWAYS',
+                results: [[path: 'allure-results']]
+            ])
+            
             echo "Publishing JUnit Test Results..."
             junit 'test-results/results.xml'
 

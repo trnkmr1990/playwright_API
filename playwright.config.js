@@ -12,6 +12,7 @@ const config = {
     ["list"],
     ["html", { open: "never" }],
     ["junit", { outputFile: "test-results/results.xml" }],
+    ["allure-playwright"],
   ],
 };
 
